@@ -127,7 +127,9 @@ node {
 - **[Docker](https://www.npmjs.com/package/axios)**
 - **[Jenkis](https://www.npmjs.com/package/react-countup)**
 
-### Instância de Ubuntu utilizada na AWS 
+
+
+## AMI de Ubuntu utilizada na AWS
 
 + [Ubuntu Server 20.04 LTS (HVM), SSD Volume Type](ami-01237fce26136c8cc)
 
