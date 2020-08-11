@@ -5,7 +5,7 @@ Exemplo de utilização de CI/CD utilizando Jenkins / AWS / Docker
 ## <img src="https://img.icons8.com/ios-filled/20/000000/browser-window.png"/> Página
 
 <p align="center">
-  <img src="https://github.com/cicerorod/igti-fullstack-mod3-react-salario-frontend/blob/master/img/tela.PNG">
+  <img src="https://github.com/cicerorod/igti-fullstack-mod3-react-salario-frontend/blob/master/images/Tela.PNG">
 </p>
 
 ## ![](https://img.icons8.com/metro/20/000000/run-command.png) Clone
@@ -15,12 +15,12 @@ Clonar via prompt de comando o projeto em uma pasta de sua preferência: `git cl
 
 ## ![](https://img.icons8.com/metro/20/000000/run-command.png) Execução
 
-### Instalação de Docker em servidores Ubuntu
+### 1 - Instalação de Docker em servidores Ubuntu - AWS
 
 Referência: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 ```
-$ sudo apt-get remove docker docker-engine docker.io containerd runc
+$sudo apt-get remove docker docker-engine docker.io containerd runc
 $sudo apt-get update
 $sudo apt-get install \
     apt-transport-https \
@@ -37,6 +37,95 @@ $sudo add-apt-repository \
 $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
+### 2 - Instalação do Java no Servidor Ubuntu – AWS
+
+```
+$ cd 
+$ pwd 
+$ sudo apt install openjdk-8-jre-headless 
+```
+### 3 - Instalação e Inicialização do Jenkins no Servidor Ubuntu – AWS
+
+### 3.1 - Instalação
+
+-  O comando será executado na pasta tools
+-  O Jenkins utilizado foi (Generic Java pachage (.war)) do site https://www.jenkins.io/download/ e deve ser informado no comando wget abaixo
+-  Comando deve ser executado na pasta raiz do ubuntu
+
+```
+$ cd 
+$ pwd
+$ ls -ltr
+$ mkdir tools
+$ cd /tools
+$ wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+$ ls -ltr
+```
+### 3.2 - Inicialização
+
+- Executar o comando para pegar as informações 'Initial password' de usuário. O comando retorna 'Initial password' (3540e56cd6cd4658b4de2dbf528a51ce) e pasta onde ficam as informações iniciais (/home/ubuntu/.jenkins/secrets/initialAdminPassword)
+
+```
+$ java -jar jenkins.war
+```
+
+- Executar “control + c” para finalizar o processo após a cópia do Initial password
+- Certificar que o processo jenkins não está no ar
+
+```
+$ps -ef | grep java
+```
+
+- Subir o processo em Background
+
+```
+$java -jar jenkins.war & 
+```
+
+O Jenkins irá subir na porta 8080 do servidor.
+
+
+### 4 - Comando para criação de um pipeline 
+
+
+```
+node {
+   def mvnHome
+   stage('Passo 01  - Preparação') {      
+      // Sincronizar e fazer o Get do código do GitHub
+      git 'https://github.com/XXXXXXX'
+     
+   }
+   stage('Passo 02 - Docker Build') {
+      // Cria a imagem docker contida no arquivo Dockerfile deste repositório
+      sh "sudo docker build -t myapp ."
+      
+   }
+   stage('Passo 03 - Parando a aplicação') { 
+      // 1 Executa um container "Hello-Word" 
+      // 2 Para todos os container
+      // 3 exclui todos os containers da máquina
+      sh label: '', script: 'sudo docker run hello-world;sudo docker stop $(sudo docker ps -a -q); sudo docker container prune -f'
+      
+   }
+   stage('Realizando o Deploy'){
+     // Executa o container e inicia o site na porta 8082 
+     sh "sudo docker run --name meusite -p 8082:80 -d myapp"  
+   }
+}
+```
+- Configuração do Segurity Group AWS:
+
+<p align="center">
+  <img src="https://github.com/cicerorod/igti-fullstack-mod3-react-salario-frontend/blob/master/images/SecurityGroups.PNG">
+</p>
+
+
+
+
+
+
+
 
 
 
