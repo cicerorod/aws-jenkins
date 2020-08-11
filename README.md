@@ -5,7 +5,7 @@ Exemplo de utilização de CI/CD utilizando Jenkins / AWS / Docker
 ## <img src="https://img.icons8.com/ios-filled/20/000000/browser-window.png"/> Página
 
 <p align="center">
-  <img src="https://github.com/cicerorod/igti-fullstack-mod3-react-salario-frontend/blob/master/images/Tela.PNG">
+  <img src="https://github.com/cicerorod/aws-jenkins/edit/master/images/Tela.PNG">
 </p>
 
 ## ![](https://img.icons8.com/metro/20/000000/run-command.png) Clone
@@ -117,7 +117,8 @@ node {
 - Configuração do Segurity Group AWS:
 
 <p align="center">
-  <img src="https://github.com/cicerorod/igti-fullstack-mod3-react-salario-frontend/blob/master/images/SecurityGroups.PNG">
+  <img src="https://github.com/cicerorod/aws-jenkins/edit/master/SecurityGroups.PNG">
+  
 </p>
 
 
