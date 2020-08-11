@@ -123,10 +123,15 @@ node {
 
 ## ![](https://img.icons8.com/ios-filled/20/000000/hammer.png) Recursos utilizados:
 
-- **[AWS](https://reactjs.org/)**
+- **[AWS](https://aws.amazon.com/pt/console/)**
 - **[Docker](https://www.npmjs.com/package/axios)**
 - **[Jenkis](https://www.npmjs.com/package/react-countup)**
-- 
+
+### Instância de Ubuntu utilizada na AWS 
+
++ [Ubuntu Server 20.04 LTS (HVM), SSD Volume Type](ami-01237fce26136c8cc)
+
+
 ## ![](https://img.icons8.com/ios-glyphs/20/000000/pull-request.png) Contribuições
 
 1. Faça o _fork_ do projeto (<https://github.com/cicerorod/aws-jenkins/fork>)
