@@ -5,7 +5,7 @@ Exemplo de utilização de CI/CD utilizando Jenkins / AWS / Docker
 ## <img src="https://img.icons8.com/ios-filled/20/000000/browser-window.png"/> Página
 
 <p align="center">
-  <img src="https://github.com/cicerorod/aws-jenkins/edit/master/images/Tela.PNG">
+  <img src="https://github.com/cicerorod/aws-jenkins/blob/master/images/Tela.PNG">
 </p>
 
 ## ![](https://img.icons8.com/metro/20/000000/run-command.png) Clone
@@ -117,54 +117,24 @@ node {
 - Configuração do Segurity Group AWS:
 
 <p align="center">
-  <img src="https://github.com/cicerorod/aws-jenkins/edit/master/SecurityGroups.PNG">
+  <img src="https://github.com/cicerorod/aws-jenkins/blob/master/images/SecurityGroups.PNG">
   
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- :hammer:-->
-
-## ![](https://img.icons8.com/ios-glyphs/20/000000/api.png) API utilizada para consumo dos dados
-
-A aplicação necessita da API para retorno da votação. O Código pode ser baixada [aqui][backend]
-
 ## ![](https://img.icons8.com/ios-filled/20/000000/hammer.png) Recursos utilizados:
 
-- **[ReactJS](https://reactjs.org/)**
-- **[Axios](https://www.npmjs.com/package/axios)**
-- **[React-countup](https://www.npmjs.com/package/react-countup)**
-- **[React Dom](https://www.npmjs.com/package/react-dom)**
-- **[HTML](https://www.w3schools.com/html/)**
-- **[JavaScript](https://www.w3schools.com/js/)**
-- **[CSS](https://www.w3schools.com/Css/)**
-- **[Materialize-css](https://materializecss.com/)**
-- **[ES6+](https://www.w3schools.com/Js/js_es6.asp)**
-- **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=hackingcarreira_wmc-github-gllemos)**
-
+- **[AWS](https://reactjs.org/)**
+- **[Docker](https://www.npmjs.com/package/axios)**
+- **[Jenkis](https://www.npmjs.com/package/react-countup)**
+- 
 ## ![](https://img.icons8.com/ios-glyphs/20/000000/pull-request.png) Contribuições
 
-1. Faça o _fork_ do projeto (<https://github.com/cicerorod/igti-fullstack-mod3-react-salario-frontend/fork>)
+1. Faça o _fork_ do projeto (<https://github.com/cicerorod/aws-jenkins/fork>)
 2. Crie uma _branch_ para sua modificação (`git checkout -b feature/[nome]`)
 3. Faça o _commit_ (`git commit -am 'Add files [nome]'`)
 4. _Push_ (`git push origin feature/[nome]`)
 5. Crie um novo _Pull Request_
 
-## ![](https://img.icons8.com/windows/20/000000/regular-document.png) Licença
-
-Este projeto está sob a licença do MIT. Consulte [LICENSE](https://github.com/cicerorod/igti-fullstack-mod3-react-salario-frontend/blob/master/LICENSE) para obter mais informações.
 
 ## ![](https://img.icons8.com/ios-glyphs/22/000000/code-file.png) Desenvolvedor
 
@@ -183,7 +153,6 @@ Este projeto está sob a licença do MIT. Consulte [LICENSE](https://github.com/
   
 </p>
 
-[backend]: https://github.com/cicerorod/igti-fullstack-mod3-react-salario-backend
 
 <!--
 [nodejs]: https://nodejs.org/
